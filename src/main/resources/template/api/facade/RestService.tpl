@@ -28,7 +28,7 @@ public interface <#$entity.entityClassName#>RestService extends CURDRestService<
      * @return
      */
     @GET
-    @Path("races")
+    @Path("")
     @ApiOperation(value = "<#$entity.entityName#>",
             notes = "<#$entity.entityName#>列表.")
     RestResult<List<<#$entity.entityClassName#>>> list(@HeaderParam(AuthRestService.HEADER_AUTHORIZATION_KEY) String token);

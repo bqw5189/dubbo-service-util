@@ -13,7 +13,7 @@ public class Entity {
     public static final String OUT_REST_PATH = OUT_PATH + "fionapet-business-rest-provider/src/main/java/com/fionapet/business/";
     public static final String OUT_SERVICE_PATH = OUT_PATH + "fionapet-business-service-provider/src/main/java/com/fionapet/business/";
 
-    public static final String[] FILTER_FIELD = new String[]{"createUserId","createDate", "updateUserId", "updateDate","status"};
+    public static final String[] FILTER_FIELD = new String[]{"uuid","createUserId","createDate", "updateUserId", "updateDate","status"};
     private String entityName;
     private String entityClassName;
     private String tableName;

@@ -40,6 +40,11 @@ public class Utils {
         array[0] -= 32;
         return String.valueOf(array);
     }
+    public static String firstLetterToLower(String str){
+        char[] array = str.toCharArray();
+        array[0] += 32;
+        return String.valueOf(array);
+    }
 
     public static String toJavaType(String type) {
         if (StringUtils.indexOf(type,"timestamp") > -1){

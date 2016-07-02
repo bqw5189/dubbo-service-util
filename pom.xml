@@ -59,6 +59,7 @@
             <artifactId>asm-all</artifactId>
             <version>3.3.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.lilystudio</groupId>
             <artifactId>smarty4j</artifactId>

@@ -29,8 +29,8 @@ public class Main {
 
     public static void main(String[] args){
         Entity entity = new Entity();
-        entity.setTableName("t_dealer");
-        entity.setEntityName("经销商");
+        entity.setTableName("t_item_type");
+        entity.setEntityName("商品和服务类型");
 
         //初始化字段
         initField(entity);

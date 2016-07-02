@@ -53,6 +53,8 @@ public class Utils {
             return "Boolean";
         }else if (StringUtils.indexOf(type,"int") > -1){
             return "Integer";
+        }else if (StringUtils.indexOf(type,"double") > -1){
+            return "double";
         }
         return "String";
     }

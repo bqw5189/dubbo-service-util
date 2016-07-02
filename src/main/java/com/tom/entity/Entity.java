@@ -8,7 +8,7 @@ import java.util.List;
  * Created by tom on 16/7/2.
  */
 public class Entity {
-    public static final String OUT_PATH = "/work/001_code/github/java/pet-hospital/fionapet-business/";
+    public static final String OUT_PATH = "/Users/bailj/01_work/01_code/01_github/01_java/pet-hospital/fionapet-business/";
     public static final String OUT_API_PATH = OUT_PATH + "fionapet-business-api/src/main/java/com/fionapet/business/";
     public static final String OUT_REST_PATH = OUT_PATH + "fionapet-business-rest-provider/src/main/java/com/fionapet/business/";
     public static final String OUT_SERVICE_PATH = OUT_PATH + "fionapet-business-service-provider/src/main/java/com/fionapet/business/";

@@ -24,7 +24,7 @@ public class <#$entity.entityClassName#> extends CMSEntity {
      */
     @ApiModelProperty(value = "<#$field.name#>", required = false)<#if $field.isNull == "NO" #>@NotNull<#/if#>
     private <#$field.type#> <#$field.name#>;
-    public String get<#$field.monthName#>() {
+    public <#$field.type#> get<#$field.monthName#>() {
         return <#$field.name#>;
     }
     public void set<#$field.monthName#>(<#$field.type#> <#$field.name#>) {

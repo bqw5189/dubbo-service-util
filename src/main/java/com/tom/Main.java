@@ -29,8 +29,8 @@ public class Main {
 
     public static void main(String[] args){
         Entity entity = new Entity();
-        entity.setTableName("t_item_type");
-        entity.setEntityName("商品和服务类型");
+        entity.setTableName("t_gest_level");
+        entity.setEntityName("会员等级管理");
 
         //初始化字段
         initField(entity);
@@ -43,8 +43,8 @@ public class Main {
     }
 
     private static void updateXml(Entity entity) {
-        String serviceXml = Entity.OUT_PATH + "fionapet-business-service-provider/src/main/resources/META-INF/spring/dubbo-business-service-provider.xml";
-        String restXml = Entity.OUT_PATH + "fionapet-business-rest-provider/src/main/resources/META-INF/spring/dubbo-business-rest-provider.xml";
+        String serviceXml = Entity.OUT_PATH + "fionapet-business-service-provider/src/main/resources/META-INF/spring/dubbo-business-service-provider-tom.xml";
+        String restXml = Entity.OUT_PATH + "fionapet-business-rest-provider/src/main/resources/META-INF/spring/dubbo-business-rest-provider-tom.xml";
 
         try {
             List<String> serviceXmlList  = FileUtils.readLines(new File(serviceXml));
@@ -89,6 +89,7 @@ public class Main {
             File outFacadeFile = new File(entity.OUT_API_PATH + File.separatorChar + "facade" + File.separatorChar + entity.getEntityClassName() + "RestService.java");
             File outServiceFile = new File(entity.OUT_API_PATH + File.separatorChar + "service" + File.separatorChar + entity.getEntityClassName() + "Service.java");
             File outDaoFile = new File(entity.OUT_SERVICE_PATH + File.separatorChar + "repository" + File.separatorChar + entity.getEntityClassName() + "Dao.java");
+            File outTestDaoFile = new File(entity.OUT_TEST_DAO_PATH + File.separatorChar + "repository" + File.separatorChar + "Test" + entity.getEntityClassName() + "Dao.java");
             File outServiceImplFile = new File(entity.OUT_SERVICE_PATH + File.separatorChar + "service" + File.separatorChar + entity.getEntityClassName() + "ServiceImpl.java");
             File outRestFile = new File(entity.OUT_REST_PATH + File.separatorChar + "facade" + File.separatorChar + entity.getEntityClassName() + "RestServiceImpl.java");
 
@@ -127,6 +128,13 @@ public class Main {
                 renderTemplate(entity, "rest/RestServiceImpl.tpl", fileOutputStream);
                 logger.info("api template render:{}", outRestFile);
             }
+
+            if (!outTestDaoFile.exists()) {
+                fileOutputStream = new FileOutputStream(outTestDaoFile);
+                renderTemplate(entity, "test/repository/TestDao.tpl", fileOutputStream);
+                logger.info("dao template render:{}", outTestDaoFile);
+            }
+
 
 
         } catch (Exception e) {
